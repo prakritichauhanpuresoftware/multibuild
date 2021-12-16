@@ -34,7 +34,7 @@ SNAPPY_VERSION="${SNAPPY_VERSION:-1.1.3}"
 CURL_VERSION=${CURL_VERSION:-7.49.1}
 NETCDF_VERSION=${NETCDF_VERSION:-4.4.1.1}
 SWIG_VERSION=${SWIG_VERSION:-4.0.1}
-PCRE_VERSION=${PCRE_VERSION:-8.38}
+PCRE_VERSION=${PCRE_VERSION:-10.39}
 SUITESPARSE_VERSION=${SUITESPARSE_VERSION:-4.5.6}
 LIBTOOL_VERSION=${LIBTOOL_VERSION:-2.4.6}
 RAGEL_VERSION=${RAGEL_VERSION:-6.10}
@@ -393,7 +393,7 @@ function build_netcdf {
 }
 
 function build_pcre {
-    build_simple pcre $PCRE_VERSION https://ftp.pcre.org/pub/pcre
+    build_simple pcre2 $PCRE_VERSION https://github.com/PhilipHazel/pcre2/releases/download/pcre2-$PCRE_VERSION
 }
 
 function build_swig {
